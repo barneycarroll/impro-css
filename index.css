@@ -1,1 +1,50 @@
 @import 'theme.css';
+
+html {
+  background: var( --body-background );
+  color: var( --grey-dark );
+  font: 1em/1.5 sans-serif;
+  max-width: 60em;
+  margin: auto;
+  padding: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  border: none;
+  color: var( --grey-light );
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.nav ol {
+  padding: 0;
+  list-style: none;
+}
+
+.nav > ol > li > ol {
+  list-style-type: decimal;
+}
+
+.content {
+  background: white;
+  padding: 1em;
+}
+
+.notice {
+  padding: 1em;
+  color: white;
+}
+
+.notice.positive {
+  background: var( --green );
+}
+
+.notice.warning {
+  background: var( --orange );
+}
