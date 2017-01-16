@@ -25,6 +25,8 @@ body {
 input {
   border: none;
   color: var( --grey-light );
+  font: inherit;
+  padding: .5em .75em;
 }
 
 .bold {
@@ -81,8 +83,18 @@ input {
   padding: 1em 0;
 }
 
-.header > :not( :first-child ) {
-  margin-left: 1em;
+@media (min-width: 40em){
+  .header > :not( :first-child ) {
+    margin-left: 1em;
+  }
+}
+
+.header-logo {
+  height: 2.5em;
+}
+
+.breadcrumbs {
+  font-size: 1.125em;
 }
 
 .content {
