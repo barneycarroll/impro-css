@@ -17,6 +17,11 @@ body {
   margin: 0;
 }
 
+ol, ul {
+  padding: 0;
+  list-style: none;
+}
+
 :-webkit-any-link {
   color: inherit;
   text-decoration: none;
@@ -122,11 +127,6 @@ input {
   }
 }
 
-.nav ol {
-  padding: 0;
-  list-style: none;
-}
-
 .nav a {
   display: block;
   padding: .25em 0;
@@ -145,7 +145,6 @@ input {
   overflow: hidden;
   align-items: center;
   justify-content: center;
-
 }
 
 .hero::before {
@@ -187,4 +186,51 @@ input {
 
 .hero-text {
   font-size: 1.125em;
+}
+
+/* progress */
+
+.progress-bar {
+  background: var( --grey-light );
+  position: relative;
+  margin: 0 0 1em;
+}
+
+html:not( .custom-elements ) .progress-bar .indicator {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+html:not( .custom-elements ) .progress-bar .indicator.started {
+  background-color: var( --orange );
+}
+
+html:not( .custom-elements ) .progress-bar .indicator.close {
+  background-color: var( --yellow );
+}
+
+html:not( .custom-elements ) .progress-bar .indicator.complete {
+  background-color: var( --green );
+}
+
+html:not( .custom-elements ) .progress-bar {
+  white-space: nowrap;
+}
+
+html:not( .custom-elements ) .progress-bar .label {
+  padding: 1em;
+}
+
+html:not( .custom-elements ) .progress-bar .underlay {
+  color: var( --grey );
+}
+
+html:not( .custom-elements ) .progress-bar .overlay {
+  color: white;
+  position: absolute;
+  z-index: 0;
 }
