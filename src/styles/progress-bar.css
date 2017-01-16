@@ -1,0 +1,41 @@
+.progress-bar {
+  background: var( --grey-light );
+  position: relative;
+  margin: 0 0 1em;
+
+  & .indicator {
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    height: 100%;
+
+    &.started {
+      background-color: var( --orange );
+    }
+
+    &.close {
+      background-color: var( --yellow );
+    }
+
+    &.complete {
+      background-color: var( --green );
+    }
+  }
+
+  & .label {
+    padding: 1em;
+    white-space: nowrap;
+  }
+
+  & .underlay {
+    color: var( --grey );
+  }
+
+  & .overlay {
+    color: white;
+    position: absolute;
+    z-index: 0;
+  }
+}

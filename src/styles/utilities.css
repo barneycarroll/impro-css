@@ -1,0 +1,34 @@
+.bold {
+  font-weight: bold;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.blue {
+  color: var( --blue );
+}
+
+.row {
+  @media (min-width: 40em){
+    display: flex;
+    align-items: stretch;
+
+    &.centered {
+      align-items: center;
+    }
+
+    & > * {
+      flex: 1 1 0;
+    }
+
+    & > .fit {
+      flex-grow: 0;
+    }
+
+    & > .repel {
+      margin-left: auto;
+    }
+  }
+}

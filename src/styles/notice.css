@@ -1,0 +1,16 @@
+.notice {
+  padding: 1em 1em 1em 7.5em;
+  color: white;
+  background: 3em 1.5em / 2em no-repeat;
+
+  &.positive {
+    background-color: var( --green );
+    background-image: url(../images/check.png);
+  }
+
+  &.warning {
+    background-color: var( --orange );
+    background-image: url(../images/warning.png);
+  }
+}
+
