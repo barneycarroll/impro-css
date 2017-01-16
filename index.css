@@ -196,7 +196,7 @@ input {
   margin: 0 0 1em;
 }
 
-html:not( .custom-elements ) .progress-bar .indicator {
+.progress-bar .indicator {
   position: absolute;
   display: block;
   overflow: hidden;
@@ -205,31 +205,31 @@ html:not( .custom-elements ) .progress-bar .indicator {
   height: 100%;
 }
 
-html:not( .custom-elements ) .progress-bar .indicator.started {
+.progress-bar .indicator.started {
   background-color: var( --orange );
 }
 
-html:not( .custom-elements ) .progress-bar .indicator.close {
+.progress-bar .indicator.close {
   background-color: var( --yellow );
 }
 
-html:not( .custom-elements ) .progress-bar .indicator.complete {
+.progress-bar .indicator.complete {
   background-color: var( --green );
 }
 
-html:not( .custom-elements ) .progress-bar {
+.progress-bar {
   white-space: nowrap;
 }
 
-html:not( .custom-elements ) .progress-bar .label {
+.progress-bar .label {
   padding: 1em;
 }
 
-html:not( .custom-elements ) .progress-bar .underlay {
+.progress-bar .underlay {
   color: var( --grey );
 }
 
-html:not( .custom-elements ) .progress-bar .overlay {
+.progress-bar .overlay {
   color: white;
   position: absolute;
   z-index: 0;
