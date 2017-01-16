@@ -74,19 +74,6 @@ input {
   }
 }
 
-.notice {
-  padding: 1em;
-  color: white;
-}
-
-.notice.positive {
-  background: var( --green );
-}
-
-.notice.warning {
-  background: var( --orange );
-}
-
 /* furniture */
 
 .header {
@@ -136,6 +123,26 @@ input {
   color: var( --blue );
   padding-left: 1em;
 }
+
+
+/* notice */
+
+.notice {
+  padding: 1em 1em 1em 7.5em;
+  color: white;
+  background: 3em 1.5em / 2em no-repeat;
+}
+
+.notice.positive {
+  background-color: var( --green );
+  background-image: url(images/check.png);
+}
+
+.notice.warning {
+  background-color: var( --orange );
+  background-image: url(images/warning.png);
+}
+
 
 /* hero */
 
@@ -187,6 +194,7 @@ input {
 .hero-text {
   font-size: 1.125em;
 }
+
 
 /* progress */
 
