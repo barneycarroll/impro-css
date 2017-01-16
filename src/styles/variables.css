@@ -9,6 +9,8 @@
   --yellow: #C6D400;
 
   --body-background: #F5F5F5;
+
+  --shadow: 0 .25em .5em var(--grey-light);
 }
 
 @custom-media --small (width <= 45em);

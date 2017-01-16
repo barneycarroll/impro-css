@@ -31,6 +31,7 @@ input {
 
 .content {
   background: white;
+  box-shadow: var(--shadow)
 }
 
 .inset {
