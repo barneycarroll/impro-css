@@ -1,16 +1,17 @@
 {
   "name": "impro-css",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "postcss -u postcss-import -u postcss-cssnext -d dist/styles src/styles/index.css",
-    "copy": "cp -r src/*.html src/scripts/ src/images/ dist",
-    "dev": "run-p copy serve watch:copy watch:build",
+    "build": "run-p css static",
+    "css": "postcss -u postcss-import -u postcss-cssnext -d dist/styles src/styles/index.css",
+    "static": "cp -r src/*.html src/scripts/ src/images/ dist",
+    "dev": "run-p copy serve watch:copy watch:css",
     "serve": "http-server dist",
-    "watch:copy": "chokidar \"src/**/*!(.css)\" -c \"npm run copy\"",
-    "watch:build": "postcss -w -u postcss-import -u postcss-cssnext -d dist/styles src/styles/index.css"
+    "watch:static": "chokidar \"src/**/*!(.css)\" -c \"npm run static\"",
+    "watch:css": "postcss -w -u postcss-import -u postcss-cssnext -d dist/styles src/styles/index.css"
   },
   "repository": {
     "type": "git",
