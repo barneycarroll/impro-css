@@ -6,6 +6,11 @@
       Tutorials : progress
     </title>
     <link rel=stylesheet href=styles/index.css />
+    <script>
+      if( window.CustomElementRegistry )
+        document.documentElement.classList.add( 'custom-elements' )
+    </script>
+    <script src=scripts/components/progress-bar.js ></script>
   </head>
   <body>
     <div class="row centered header">
@@ -28,8 +33,7 @@
     <div>
       <ol>
         <li>
-          <div
-            is=progress-bar
+          <progress-bar
             class=progress-bar
             data-label="1. Hello world"
             data-measure=100
@@ -39,20 +43,21 @@
               style="width:100%"
             >
               <div class="label overlay">
+                <span class=text>
                   <span class=bold>1. Hello World</span>
-                  <span class=measure> 100%</span>
+                  <span class=measure>&nbsp;100%&nbsp;</span>
               </div>
             </div>
 
             <div class="label underlay">
-                <span class=bold>1. Hello World</span>
-                <span class=measure> 100%</span>
+              <span class=bold>1. Hello World</span>
+              <span class=measure>&nbsp;100%&nbsp;</span>
             </div>
-          </div>
+          </progress-bar>
         </li>
 
         <li>
-          <div
+          <progress-bar
             is=progress-bar
             class=progress-bar
             data-label="2. Introduction to SpatialOS"
@@ -63,20 +68,22 @@
               style="width:60%"
             >
               <div class="label overlay">
+                <span class=text>
                   <span class=bold>2. Introduction to SpatialOS</span>
-                  <span class=measure> 60%</span>
+                  <span class=measure>&nbsp;60%&nbsp;</span>
+                </span>
               </div>
             </div>
 
             <div class="label underlay">
-                <span class=bold>2. Introduction to SpatialOS</span>
-                <span class=measure> 60%</span>
+              <span class=bold>2. Introduction to SpatialOS</span>
+              <span class=measure>&nbsp;60%&nbsp;</span>
             </div>
-          </div>
+          </progress-bar>
         </li>
 
         <li>
-          <div
+          <progress-bar
             is=progress-bar
             class=progress-bar
             data-label="3. Pirates game"
@@ -87,16 +94,18 @@
               style="width:8%"
             >
               <div class="label overlay">
+                <span class=text>
                   <span class=bold>3. Pirates game</span>
-                  <span class=measure> 8%</span>
+                  <span class=measure>&nbsp;8%&nbsp;</span>
+                </span>
               </div>
             </div>
 
             <div class="label underlay">
-                <span class=bold>3. Pirates game</span>
-                <span class=measure> 8%</span>
+              <span class=bold>3. Pirates game</span>
+              <span class=measure>&nbsp;8%&nbsp;</span>
             </div>
-          </div>
+          </progress-bar>
         </li>
       </ol>
     </div>

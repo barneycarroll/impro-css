@@ -1,4 +1,5 @@
 .progress-bar {
+  display: block;
   background: var( --grey-light );
   position: relative;
   margin: 0 0 1em;
@@ -6,7 +7,6 @@
   & .indicator {
     position: absolute;
     display: block;
-    overflow: hidden;
     top: 0;
     left: 0;
     height: 100%;
@@ -25,8 +25,10 @@
   }
 
   & .label {
+    overflow: hidden;
     padding: 1em;
     white-space: nowrap;
+    max-width: 100%;
   }
 
   & .underlay {
@@ -37,5 +39,19 @@
     color: white;
     position: absolute;
     z-index: 0;
+  }
+
+  & .floating .measure {
+    position: absolute;
+    padding: 1em 0;
+    right: 0;
+
+    &.before {
+      color: white;
+    }
+
+    &.after {
+      transform: translateX( 100% );
+    }
   }
 }
