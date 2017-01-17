@@ -13,8 +13,7 @@ window.addEventListener( 'resize', new function(){
 
     cancelAnimationFrame( frame )
 
-    frame = () =>
-      requestAnimationFrame( updateLayouts )
+    frame = requestAnimationFrame( updateLayouts )
   }
 }() )
 
@@ -26,7 +25,9 @@ customElements.define( 'progress-bar', class ProgressBar extends HTMLElement {
   connectedCallback(){
     this.connected = true
 
-    instanceLayouts.set( this, this.layout )
+    instanceLayouts.set( this, () =>
+      this.layout()
+    )
 
     if( !this.initialised ){
       const measure = this.getAttribute( 'data-measure' )
