@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "wipe": "rm -rf dist/**",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "run-p css static",
+    "build": "run-s wipe css static",
     "css": "postcss -u postcss-import -u postcss-cssnext -d dist/styles src/styles/index.css",
-    "static": "cp -r src/*.html src/scripts/ src/images/ dist",
-    "dev": "run-p copy serve watch:copy watch:css",
+    "static": "cp -R src/*.html src/scripts src/images dist",
+    "dev": "run-p build serve watch:static watch:css",
     "serve": "http-server dist",
     "watch:static": "chokidar \"src/**/*!(.css)\" -c \"npm run static\"",
     "watch:css": "postcss -w -u postcss-import -u postcss-cssnext -d dist/styles src/styles/index.css"
